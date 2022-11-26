@@ -3,16 +3,29 @@ package br.com.practice.practiceProjetct.entities;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tb_cat")
 public class Cat {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
+    @Column(name = "nome", nullable = false)
     String nome;
+
+    @Column(name = "cor", nullable = false)
     String cor;
+
+    @Column(name = "altura", nullable = false)
     double altura;
+    @Column(name = "peso", nullable = false)
     double peso;
+    @Column(name = "idade", nullable = false)
     int idade;
+
+    public Cat(){
+
+    }
 
     public Long getId() {
         return id;
