@@ -5,6 +5,7 @@ import br.com.practice.practiceProjetct.service.CatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,11 @@ public class CatController {
     @GetMapping("/findCat")
     public List<Cat> findCat(){
         return service.findCat();
+    }
+
+    @PostMapping("/insertCat")
+    public List<Cat> insertCat(){
+        return service.insertCat();
     }
 
 }

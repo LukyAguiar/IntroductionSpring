@@ -51,7 +51,7 @@ public class Cat {
         this.cor = cor;
     }
 
-    public double getAltura() {
+    public double getAltura(int i) {
         return altura;
     }
 
